@@ -40,3 +40,7 @@ p {
     font-size: 16px;
     color: #666;
 }
+
+span {
+    font-size: 5rem;
+}
