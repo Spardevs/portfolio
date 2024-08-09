@@ -1,4 +1,5 @@
 import React from 'react'
+import './languageSelect.css'
 
 const I18N_STORAGE_KEY = 'i18nextLng'
 const LanguageSelect = () => {
