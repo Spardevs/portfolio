@@ -5,7 +5,9 @@ const messages = {
         app: 'Spardev'
       },
       apresentation: {
-        title: 'Web Developer'
+        title: 'Web Developer',
+        button: 'Download CV',
+        pdf: '/public/assets/downloads/CV - Gabriel Ramos.pdf'
       }
     }
   }

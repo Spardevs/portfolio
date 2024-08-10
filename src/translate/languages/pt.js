@@ -5,7 +5,9 @@ const messages = {
         app: 'Spardev'
       },
       apresentation: {
-        title: 'Desenvolvedor Web'
+        title: 'Desenvolvedor Web',
+        button: 'Baixar CV',
+        pdf: '/public/assets/downloads/CV - Gabriel Fernandes Ramos.pdf'
       }
     }
   }
