@@ -6,10 +6,11 @@ const Home = () => {
     <section id="home" className="flex items-center justify-center h-screen container">
       <div id='image' className="flex flex-col items-center justify-center w-1/5">
         <img
-          src="src/assets/images/foto-perfil.jpg"
+          src="./src/assets/images/foto-perfil.jpg"
           alt="profile-image"
           id="profile-image"
-          className='rounded-3xl shadow-2xl' />
+          className='rounded-3xl shadow-2xl'
+        />
       </div>
       <div id='text' className='w-2/5'>
         <div id='apresentation'>

@@ -7,7 +7,7 @@ const messages = {
       apresentation: {
         title: 'Web Developer',
         button: 'Download CV',
-        pdf: 'src/assets/downloads/CV_Gabriel_Ramos.pdf'
+        pdf: 'assets/downloads/CV_Gabriel_Ramos.pdf'
       }
     }
   }
