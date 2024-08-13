@@ -4,9 +4,9 @@ import './styles/home.css';
 const Home = () => {
   return (
     <section id="home" className="flex items-center justify-center h-screen container">
-      <div id='image' className="flex flex-col items-center justify-center w-1/5">
+      <div id='image' className="flex flex-col items-center justify-center w-1/5 ">
         <img
-          href="portfolio/assets/images/foto-perfil.jpg"
+          src="src/assets/images/foto-perfil.jpg"
           alt="profile-image"
           id="profile-image"
           className='rounded-3xl shadow-2xl'
@@ -24,7 +24,7 @@ const Home = () => {
           </a>
           <a className='bg-primary rounded-xl p-5 m-2 shadow-2xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-darkPrimary' href="https://www.linkedin.com/in/spardev/" target='_blank'>
             <i data-feather="linkedin" className="text-4xl" />
-          </a>QN651046833BR
+          </a>
           <a className='bg-primary rounded-xl p-5 m-2 shadow-2xl flex items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-darkPrimary' href={i18n.t('apresentation.pdf')} target='_blank'>
             <i data-feather="file-text" className="text-4xl" />
             <p className='font-lato ml-2'>{i18n.t('apresentation.button')}</p>
