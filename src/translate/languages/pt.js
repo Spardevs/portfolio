@@ -7,7 +7,7 @@ const messages = {
       apresentation: {
         title: 'Desenvolvedor Web',
         button: 'Baixar CV',
-        pdf: 'src/assets/downloads/CVGabrielFernandesRamos.pdf'
+        pdf: 'public/assets/downloads/CVGabrielFernandesRamos.pdf'
       }
     }
   }
