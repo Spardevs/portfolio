@@ -4,14 +4,6 @@ import './styles/home.css';
 const Home = () => {
   return (
     <section id="home" className="flex items-center justify-center h-screen container">
-<<<<<<< HEAD
-      <div id='image' className="flex flex-col items-center justify-center w-1/5">
-        <img
-          src="/public/assets/images/foto-perfil.jpg"
-          alt="profile-image"
-          id="profile-image"
-          className='rounded-3xl shadow-2xl' />
-=======
       <div id='image' className="flex flex-col items-center justify-center w-1/5 ">
         <img
           src="/public/assets/images/fotoPerfil.jpg"
@@ -19,7 +11,6 @@ const Home = () => {
           id="profile-image"
           className='rounded-3xl shadow-2xl'
         />
->>>>>>> main
       </div>
       <div id='text' className='w-2/5'>
         <div id='apresentation'>
@@ -28,17 +19,10 @@ const Home = () => {
         </div>
         <div className='bg-black w-2/3 h-0.5 m-5 justify-center mx-auto'></div>
         <div id='social' className="flex items-center justify-center text-center text-white w-full">
-<<<<<<< HEAD
-          <a className='bg-primary rounded-xl p-5 p-3 m-2 shadow-2xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-darkPrimary' href="https://github.com/spardevs" target='_blank'>
-            <i data-feather="github" className="text-4xl" />
-          </a>
-          <a className='bg-primary rounded-xl p-5 p-3 m-2 shadow-2xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-darkPrimary' href="https://www.linkedin.com/in/spardev/" target='_blank'>
-=======
           <a className='bg-primary rounded-xl p-5 m-2 shadow-2xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-darkPrimary' href="https://github.com/spardevs" target='_blank'>
             <i data-feather="github" className="text-4xl" />
           </a>
           <a className='bg-primary rounded-xl p-5 m-2 shadow-2xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-darkPrimary' href="https://www.linkedin.com/in/spardev/" target='_blank'>
->>>>>>> main
             <i data-feather="linkedin" className="text-4xl" />
           </a>
           <a className='bg-primary rounded-xl p-5 m-2 shadow-2xl flex items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-darkPrimary' href={i18n.t('apresentation.pdf')} target='_blank'>
