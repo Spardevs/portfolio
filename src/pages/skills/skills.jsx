@@ -1,16 +1,17 @@
-import SkillsIcons from './components/skillsIcons';
+import SkillsIcons from './components/skillsIcons'
+import WhatIDo from './components/whatIDo'
 
 const Skills = () => {
   return (
-    <section id="skills" className="w-100 h-screen w-full">
-      <div id='rodaDeSkills' className='h-auto bg-lightGrey w-full p-10'>
+    <section id="skills" className="h-screen">
+      <div id="rodaDeSkills" className="h-auto bg-lightGrey py-10">
         <SkillsIcons />
       </div>
-      <div id='oqueFaco' className='bg-white w-100'>
-        bbbbbbbbbbbbbb
+      <div id="oqueFaco" className="bg-white">
+        <WhatIDo />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills
