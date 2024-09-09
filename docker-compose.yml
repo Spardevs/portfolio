@@ -3,8 +3,11 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
-      - "8080:80"
+      - '3000:3000'
+    volumes:
+      - .:/app # Monta o diretório de código local dentro do container
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
+    command: npm run dev # Comando para rodar o Vite em modo de desenvolvimento

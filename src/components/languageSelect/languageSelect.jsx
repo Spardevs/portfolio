@@ -1,9 +1,8 @@
-import React from 'react';
-import Flag from 'react-flagkit';
-import Select from 'react-select';
-import './languageSelect.css';
+import React from 'react'
+import Flag from 'react-flagkit'
+import Select from 'react-select'
 
-const I18N_STORAGE_KEY = 'i18nextLng';
+const I18N_STORAGE_KEY = 'i18nextLng'
 
 const options = [
   {
@@ -16,21 +15,21 @@ const options = [
     label: 'EN',
     flag: <Flag country="US" />,
   },
-];
+]
 
 const LanguageSelect = () => {
-  const [language, setLanguage] = React.useState(window.localStorage.getItem(I18N_STORAGE_KEY));
+  const [language, setLanguage] = React.useState(window.localStorage.getItem(I18N_STORAGE_KEY))
 
   const handleLanguageChange = (selectedOption) => {
-    window.localStorage.setItem(I18N_STORAGE_KEY, selectedOption.value);
-    setLanguage(selectedOption.value);
-    window.location.reload();
-  };
+    window.localStorage.setItem(I18N_STORAGE_KEY, selectedOption.value)
+    setLanguage(selectedOption.value)
+    window.location.reload()
+  }
 
   return (
     <Select
-      className="mt-5 text-black shadow-2xl"
-      value={options.find(option => option.value === language)}
+      className="mt-5 text-black shadow-2xl input-w-sm"
+      value={options.find((option) => option.value === language)}
       onChange={handleLanguageChange}
       options={options}
       getOptionLabel={(option) => (
@@ -51,7 +50,7 @@ const LanguageSelect = () => {
         )
       }
     />
-  );
-};
+  )
+}
 
-export default LanguageSelect;
+export default LanguageSelect
