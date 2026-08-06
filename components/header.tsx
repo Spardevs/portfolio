@@ -17,6 +17,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState("home");
+  const [mounted, setMounted] = useState(false);
 
   const navItems = [
     { label: t.home, href: "#home", icon: Home },
@@ -27,6 +28,8 @@ export function Header() {
   ];
 
   useEffect(() => {
+    setMounted(true);
+
     const updateActiveSection = () => {
       const markerPosition = window.scrollY + window.innerHeight * 0.35;
       let currentSection = "home";
@@ -52,6 +55,7 @@ export function Header() {
   }, []);
 
   const isActive = (href: string) => activeSection === href.slice(1);
+  const isDark = mounted && resolvedTheme === "dark";
 
   return (
     <motion.header
@@ -141,7 +145,7 @@ export function Header() {
             aria-label="Toggle theme"
           >
             <AnimatePresence mode="wait">
-              {resolvedTheme === "dark" ? (
+              {isDark ? (
                 <motion.div
                   key="sun"
                   initial={{ rotate: -90, opacity: 0 }}
@@ -258,7 +262,7 @@ export function Header() {
                 }
                 className="rounded-lg p-2 text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
               >
-                {resolvedTheme === "dark" ? (
+                {isDark ? (
                   <Sun className="h-4 w-4" />
                 ) : (
                   <Moon className="h-4 w-4" />
