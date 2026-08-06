@@ -5,8 +5,7 @@
       "about": "Sobre",
       "services": "O que desenvolvo",
       "skills": "Skills",
-      "projects": "Projetos",
-      "blog": "Blog"
+      "projects": "Projetos"
     },
     "hero": {
       "greeting": "Olá, eu sou",
@@ -19,18 +18,17 @@
     "about": {
       "title": "Sobre mim",
       "subtitle": "Desenvolvedor apaixonado por criar soluções",
-      "intro": "Sou desenvolvedor Full Stack com sólida experiência em Kotlin, React.js, GraphQL e Tailwind. Tenho atuado no desenvolvimento de aplicações web e mobile, focando em entregar soluções eficientes, escaláveis e seguras.",
+      "intro": "Sou desenvolvedor Full Stack com experiência em C#, .NET, Kotlin, React.js, Vue.js, SQL e Entity Framework. Tenho atuado no desenvolvimento de aplicações web e mobile, focando em entregar soluções eficientes, escaláveis e seguras.",
       "location": {
         "label": "Localização",
         "value": "Mato Grosso, Brasil"
       },
       "experience": {
-        "label": "Experiência",
-        "value": "+5 anos"
+        "label": "Experiência"
       },
-      "status": {
-        "label": "Status",
-        "value": "Disponível"
+      "education": {
+        "label": "Formação",
+        "value": "Análise e Desenvolvimento de Sistemas"
       },
       "sections": {
         "trajectory": {
@@ -153,13 +151,6 @@
     "footer": {
       "rights": "Todos os direitos reservados.",
       "builtWith": "Feito com Next.js e Tailwind CSS"
-    },
-    "blog": {
-      "title": "Blog",
-      "description": "Pensamentos sobre desenvolvimento, tecnologia e carreira.",
-      "readMore": "Ler mais",
-      "backHome": "Voltar ao início",
-      "noPosts": "Nenhum post encontrado."
     }
   },
   "en-US": {
@@ -168,8 +159,7 @@
       "about": "About",
       "services": "What I Build",
       "skills": "Skills",
-      "projects": "Projects",
-      "blog": "Blog"
+      "projects": "Projects"
     },
     "hero": {
       "greeting": "Hello, I'm",
@@ -182,18 +172,17 @@
     "about": {
       "title": "About Me",
       "subtitle": "Developer passionate about building solutions",
-      "intro": "I am a Full Stack Developer with solid experience in Kotlin, React.js, GraphQL, and Tailwind. I have worked on web and mobile applications, focusing on delivering efficient, scalable, and secure solutions.",
+      "intro": "I am a Full Stack Developer with experience in C#, .NET, Kotlin, React.js, Vue.js, SQL, and Entity Framework. I have worked on web and mobile applications, focusing on delivering efficient, scalable, and secure solutions.",
       "location": {
         "label": "Location",
         "value": "Mato Grosso, Brazil"
       },
       "experience": {
-        "label": "Experience",
-        "value": "5+ years"
+        "label": "Experience"
       },
-      "status": {
-        "label": "Status",
-        "value": "Available"
+      "education": {
+        "label": "Education",
+        "value": "Systems Analysis and Development"
       },
       "sections": {
         "trajectory": {
@@ -316,13 +305,6 @@
     "footer": {
       "rights": "All rights reserved.",
       "builtWith": "Built with Next.js and Tailwind CSS"
-    },
-    "blog": {
-      "title": "Blog",
-      "description": "Thoughts on development, technology, and career.",
-      "readMore": "Read more",
-      "backHome": "Back to home",
-      "noPosts": "No posts found."
     }
   }
 }

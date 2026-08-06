@@ -84,7 +84,6 @@ export function HeroSection() {
               className="flex flex-wrap items-center justify-center lg:justify-start gap-4"
             >
               <div className="flex items-center gap-2">
-                {/* GitHub */}
                 <Button
                   variant="outline"
                   size="icon"
@@ -102,7 +101,6 @@ export function HeroSection() {
                   </a>
                 </Button>
 
-                {/* LinkedIn */}
                 <Button
                   variant="outline"
                   size="icon"
@@ -120,7 +118,6 @@ export function HeroSection() {
                   </a>
                 </Button>
 
-                {/* Email */}
                 <Button
                   variant="outline"
                   size="icon"

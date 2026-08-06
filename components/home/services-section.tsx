@@ -100,10 +100,8 @@ export function ServicesSection() {
                 }}
                 className="group relative bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-colors cursor-pointer overflow-hidden"
               >
-                {/* Background glow effect on hover */}
                 <motion.div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* Icon container with animation */}
                 <motion.div
                   className="relative w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5"
                   whileHover={{
@@ -121,7 +119,6 @@ export function ServicesSection() {
                   {service.description}
                 </p>
 
-                {/* Bottom accent line */}
                 <motion.div
                   className="absolute bottom-0 left-0 h-1 bg-primary"
                   initial={{ width: "0%" }}

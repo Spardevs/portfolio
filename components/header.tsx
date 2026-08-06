@@ -1,32 +1,57 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useLocale } from "@/lib/locale-context";
 import { content } from "@/lib/content";
-import { Moon, Sun, Globe, Menu, X, Home, User, BookOpen } from "lucide-react";
+import { Moon, Sun, Globe, Menu, X, Home, User, BriefcaseBusiness, Code2, FolderGit2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const sectionIds = ["home", "about", "services", "skills", "projects"] as const;
 
 export function Header() {
   const { locale, toggleLocale } = useLocale();
   const { resolvedTheme, setTheme } = useTheme();
-  const pathname = usePathname();
   const t = content[locale].nav;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState("home");
 
   const navItems = [
-    { label: t.home, href: "/", icon: Home },
-    { label: t.about, href: "/sobre", icon: User },
-    // { label: t.blog, href: "/blog", icon: BookOpen },
+    { label: t.home, href: "#home", icon: Home },
+    { label: t.about, href: "#about", icon: User },
+    { label: t.services, href: "#services", icon: BriefcaseBusiness },
+    { label: t.skills, href: "#skills", icon: Code2 },
+    { label: t.projects, href: "#projects", icon: FolderGit2 },
   ];
 
-  const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
-  };
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const markerPosition = window.scrollY + window.innerHeight * 0.35;
+      let currentSection = "home";
+
+      for (const sectionId of sectionIds) {
+        const section = document.getElementById(sectionId);
+        if (section && section.offsetTop <= markerPosition) {
+          currentSection = sectionId;
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+
+  const isActive = (href: string) => activeSection === href.slice(1);
 
   return (
     <motion.header
@@ -43,7 +68,6 @@ export function Header() {
           spardev
         </Link>
 
-        {/* Desktop nav - icons only, expand on hover or when active */}
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item, index) => {
             const Icon = item.icon;
@@ -61,6 +85,7 @@ export function Header() {
               >
                 <Link
                   href={item.href}
+                  onClick={() => setActiveSection(item.href.slice(1))}
                   className={`relative flex items-center gap-2 rounded-full px-3 py-2 text-sm transition-all duration-300 ${
                     active
                       ? "bg-primary text-primary-foreground"
@@ -141,7 +166,6 @@ export function Header() {
           </motion.button>
         </div>
 
-        {/* Mobile menu button */}
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -174,7 +198,6 @@ export function Header() {
         </motion.button>
       </div>
 
-      {/* Mobile nav */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -197,7 +220,10 @@ export function Header() {
                   >
                     <Link
                       href={item.href}
-                      onClick={() => setMobileOpen(false)}
+                      onClick={() => {
+                        setActiveSection(item.href.slice(1));
+                        setMobileOpen(false);
+                      }}
                       className={`flex items-center gap-3 rounded-lg px-4 py-3 text-sm transition-colors ${
                         active
                           ? "bg-primary text-primary-foreground"
