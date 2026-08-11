@@ -56,12 +56,19 @@ export const metadata: Metadata = {
     title: "Spardev | Desenvolvedor Full Stack",
     description:
       "Portfólio de Gabriel Fernandes Ramos, desenvolvedor Full Stack especializado em C#, .NET, Kotlin, React.js, Vue.js, SQL e Entity Framework.",
+    images: [
+      {
+        url: "/favicon.png",
+        alt: "Favicon do projeto Spardev",
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: "Spardev | Desenvolvedor Full Stack",
     description:
       "Portfólio de Gabriel Fernandes Ramos, desenvolvedor Full Stack e freelancer.",
+    images: ["/favicon.png"],
   },
   robots: {
     index: true,
