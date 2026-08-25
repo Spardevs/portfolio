@@ -145,6 +145,13 @@
           "tech": ["Java", "Kotlin", "Jetpack Compose"],
           "github": "https://github.com/spardevv/atrium",
           "link": null
+        },
+        {
+          "title": "Shadow Wizard Money Gang",
+          "description": "Sistema financeiro multiusuário para entradas, saídas e recorrências organizadas em cofres. Monorepo com NestJS, Expo e PostgreSQL.",
+          "tech": ["TypeScript", "NestJS", "Expo", "React Native", "PostgreSQL", "Drizzle ORM"],
+          "github": "https://github.com/spardevv/shadowwizard",
+          "link": null
         }
       ]
     },
@@ -298,6 +305,13 @@
           "description": "Modern Android platform for point-of-sale operation in events and self-service kiosks.",
           "tech": ["Java", "Kotlin", "Jetpack Compose"],
           "github": "https://github.com/spardevv/atrium",
+          "link": null
+        },
+        {
+          "title": "Shadow Wizard Money Gang",
+          "description": "Multi-user financial system for income, expenses, and recurring transactions organized in vaults. Monorepo with NestJS, Expo, and PostgreSQL.",
+          "tech": ["TypeScript", "NestJS", "Expo", "React Native", "PostgreSQL", "Drizzle ORM"],
+          "github": "https://github.com/spardevv/shadowwizard",
           "link": null
         }
       ]
